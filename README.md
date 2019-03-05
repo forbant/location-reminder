@@ -1,3 +1,3 @@
-# location-reminrder
+# location-reminder
 
 push from PC
