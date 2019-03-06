@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -26,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        ArrayList<ExampleItem> exampleItems = new ArrayList<>();
+        exampleItems.add(new ExampleItem(R.drawable.ic_android, "Line 1 large", "line 1 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_emoticon, "Line 2 large", "line 2 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_hotel, "Line 3 large", "line 3 small"));
     }
 
     @Override

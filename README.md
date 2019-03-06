@@ -1,3 +1,3 @@
 # location-reminder
 
-push from PC
+push from PC via ssh
