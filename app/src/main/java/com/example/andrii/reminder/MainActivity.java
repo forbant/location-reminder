@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
@@ -12,6 +14,10 @@ import android.view.MenuItem;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter adapter;
+    private RecyclerView.LayoutManager layoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +39,48 @@ public class MainActivity extends AppCompatActivity {
         exampleItems.add(new ExampleItem(R.drawable.ic_android, "Line 1 large", "line 1 small"));
         exampleItems.add(new ExampleItem(R.drawable.ic_emoticon, "Line 2 large", "line 2 small"));
         exampleItems.add(new ExampleItem(R.drawable.ic_hotel, "Line 3 large", "line 3 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_android, "Line 1 large", "line 1 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_emoticon, "Line 2 large", "line 2 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_hotel, "Line 3 large", "line 3 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_android, "Line 1 large", "line 1 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_emoticon, "Line 2 large", "line 2 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_hotel, "Line 3 large", "line 3 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_android, "Line 1 large", "line 1 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_emoticon, "Line 2 large", "line 2 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_hotel, "Line 3 large", "line 3 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_android, "Line 1 large", "line 1 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_emoticon, "Line 2 large", "line 2 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_hotel, "Line 3 large", "line 3 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_android, "Line 1 large", "line 1 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_emoticon, "Line 2 large", "line 2 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_hotel, "Line 3 large", "line 3 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_android, "Line 1 large", "line 1 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_emoticon, "Line 2 large", "line 2 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_hotel, "Line 3 large", "line 3 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_android, "Line 1 large", "line 1 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_emoticon, "Line 2 large", "line 2 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_hotel, "Line 3 large", "line 3 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_android, "Line 1 large", "line 1 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_emoticon, "Line 2 large", "line 2 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_hotel, "Line 3 large", "line 3 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_android, "Line 1 large", "line 1 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_emoticon, "Line 2 large", "line 2 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_hotel, "Line 3 large", "line 3 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_android, "Line 1 large", "line 1 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_emoticon, "Line 2 large", "line 2 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_hotel, "Line 3 large", "line 3 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_android, "Line 1 large", "line 1 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_emoticon, "Line 2 large", "line 2 small"));
+        exampleItems.add(new ExampleItem(R.drawable.ic_hotel, "Line 3 large", "line 3 small"));
+
+
+        recyclerView = findViewById(R.id.recyclerView);
+        layoutManager = new LinearLayoutManager(this);
+        adapter = new ExampleAdapter(exampleItems);
+
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(adapter);
+
     }
 
     @Override
